@@ -8,14 +8,13 @@ class Work_list:
     def __init__(self, path):
         self.dict = self.get_config(path)
         for item in self.dict:
-            print(item)
             self.dict[item]['frequency'] = self.convert_to_seconds(self.dict[item]['frequency'])
         self.tasks = []
         self.create_task_list()
         
     def get_config(self, path):
         with open(path) as f:
-            return(yaml.load(f,Loader=yaml.FullLoader))
+            return(yaml.load(f, Loader=yaml.FullLoader))
     
     def create_task_list(self):
         for item in self.dict:

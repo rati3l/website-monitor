@@ -18,7 +18,7 @@ class Task:
             self.timer_start()
             try:
                 response = requests.get(self.url)
-            except requests.exceptions.ConnectionError as ConnectionError:
+            except requests.exceptions.ConnectionError:
                 self.contains = None
                 self.status_code = 'website unreachable'
             else:
@@ -28,9 +28,10 @@ class Task:
                 else:
                     self.contains = False
             self.timer_stop()
-            logging_string = [self.url, self.keyword, str(self.contains),
-                         str(self.status_code), str(self.time_took)]
-            logging.info('; '.join(logging_string))
+            logging_vars =  [self.url, self.keyword, self.contains,
+                         self.status_code, self.time_took]
+            logging_vars = map(lambda x: str(x), logging_vars)
+            logging.info('; '.join(logging_vars))
             time.sleep(self.frequency)
 
     def timer_start(self):
