@@ -1,0 +1,46 @@
+<html>
+<meta http-equiv="refresh" content="10">
+
+<style type="text/css">
+  .tg  {border-collapse:collapse;border-spacing:0;}
+  .tg td{font-family:Arial, sans-serif; font-weight:bold; font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color: #545454}
+  .tg th{font-family:Arial, sans-serif; color: #c4c0c0; font-weight:bold; font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color: #424242}
+  .tg .tg1{color:LightGray;text-align:left;vertical-align:top; }
+  .tg .tg2{color:LightGray;text-align:left;vertical-align:top}
+
+  .tg .false {color: red}
+  .tg .true {color: green}
+  .tg .na {color: grey}
+
+  body {
+    background-color: #262626
+  }
+</style>
+
+
+
+<table class="tg">
+<tr>
+  <th class= class="tg1">LAST CHECK</th>
+  <th class= class="tg1">WEBSITE</th>
+  <th class= class="tg1">KEYWORD</th>
+  <th class= class="tg1">FOUND</th>
+  <th class= class="tg1">HTTP RESPONSE</th>
+  <th class= class="tg1">TIME TAKEN</th>
+
+</tr>
+{% for row in table %}
+    <tr>
+      {% for cell in row %}
+        {% if cell == True %}<td class="true">Yes</td>{% else %}
+        {% if cell == False  %}<td class="false">No</td>{% else %}
+        {% if cell == None %}<td class="na">N/A</td>{% else %}
+          <td class="tg2">{{ cell }}</td>
+        {% endif %} {% endif %} {% endif %}
+      {% endfor %}
+    </tr>
+
+{% endfor %}
+</table>
+</body>
+</html>

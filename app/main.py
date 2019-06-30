@@ -15,10 +15,11 @@ def main():
     
     @app.route('/')
     def mainpage():
-        html_table = [[x.start_time , x.url, x.keyword, x.contains, x.status_code, x.time_took]
+        html_table = [[x.last_run , x.url, x.keyword, x.contains, 
+                       x.status_code, str(x.time_took)+'s']
                       for x in Workers.tasks]
         
-        return render_template('main.html', x = html_table)
+        return render_template('main.html', table = html_table)
 
     app.run()
 

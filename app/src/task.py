@@ -36,6 +36,8 @@ class Task:
 
     def timer_start(self):
         self.start_time = time.time()
+        self.last_run = time.strftime('%Y-%m-%d %H:%M:%S',
+                                      time.gmtime(self.start_time))
     
     def timer_stop(self):
         self.time_took = round(time.time() - self.start_time,3)
