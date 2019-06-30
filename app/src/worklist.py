@@ -4,7 +4,8 @@ from src.task import Task
 
 
 class Work_list:
-
+    """ loads yaml config file and creates list of workers for each main key
+        in yaml """
     def __init__(self, path):
         self.dict = self.get_config(path)
         for item in self.dict:
@@ -21,9 +22,8 @@ class Work_list:
             self.tasks.append(Task(**self.dict[item]))
     
     def convert_to_seconds(self, time):
-
+        # to unify different time units
         helper = lambda: int(''.join(x for x in time if x.isdigit()))
-        
         time_chars = {'s': 1, 'm': 60, 'h': 3600}
         
         for char in time_chars:

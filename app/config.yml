@@ -14,7 +14,7 @@ website3:
   frequency: '3s'
 
 website4:
-  url: https://www.localhost.net
+  url: https://www.localhost.com
   keyword: can't
   frequency: '10s'
 
@@ -41,7 +41,7 @@ website8:
 website9:
   url: http://127.0.0.1:5000
   keyword: LAST CHECK
-  frequency: '1s'
+  frequency: '1m'
 
 
 website10:

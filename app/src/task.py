@@ -8,12 +8,16 @@ class Task:
         self.url = url
         self.frequency = frequency
         self.keyword = keyword
-    
+        self.contains = None
+        self.status_code = None
+        self.time_took = None
+        
     def run(self):
         task = threading.Thread(target=self.worker)
         task.start()
 
     def worker(self):
+        #target process used by worker
         while True:
             self.timer_start()
             try:
@@ -36,6 +40,7 @@ class Task:
 
     def timer_start(self):
         self.start_time = time.time()
+        # parse time from epoch to human-readable format
         self.last_run = time.strftime('%Y-%m-%d %H:%M:%S',
                                       time.gmtime(self.start_time))
     
