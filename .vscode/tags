@@ -1,0 +1,24 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+Config	../src/config_loader.py	/^class Config:$/;"	kind:class	line:6
+Task	../main.py	/^from src.task import Task$/;"	kind:namespace	line:3
+Task	../src/config_loader.py	/^from src.task import Task$/;"	kind:namespace	line:2
+Task	../src/task.py	/^class Task:$/;"	kind:class	line:5
+__init__	../src/config_loader.py	/^    def __init__(self, path):$/;"	kind:member	line:8
+__init__	../src/task.py	/^    def __init__(self, url, retry_time):$/;"	kind:member	line:6
+config_loader.py	../src/config_loader.py	1;"	kind:file	line:1
+create_task_list	../src/config_loader.py	/^    def create_task_list(self):$/;"	kind:member	line:17
+get_config	../src/config_loader.py	/^    def get_config(self, path):$/;"	kind:member	line:13
+logging	../main.py	/^import logging$/;"	kind:namespace	line:1
+main	../main.py	/^def main():$/;"	kind:function	line:5
+main.py	../main.py	1;"	kind:file	line:1
+perform	../src/task.py	/^    def perform(self):$/;"	kind:member	line:11
+task.py	../src/task.py	1;"	kind:file	line:1
+urllib3	../src/task.py	/^import urllib3$/;"	kind:namespace	line:1
+worker.py	../src/worker.py	1;"	kind:file	line:1
+yaml	../main.py	/^import yaml$/;"	kind:namespace	line:2
+yaml	../src/config_loader.py	/^import yaml$/;"	kind:namespace	line:1
